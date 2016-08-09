@@ -1,23 +1,30 @@
 {
-  "name": "hipster",
-  "version": "1.0.0",
+  "name": "react-webpack-boilerplate",
+  "version": "0.1.0",
   "description": "",
   "main": "src/app.js",
-  "engines" : { "node" : "6.3.1" },
+  "engines": {
+    "node": "6.3.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel": "babel",
-    "dev": "webpack --config webpack.dev.config.js"
+    "dev": "webpack --config webpack.dev.config.js",
+    "dev-server": "webpack-dev-server --progress --profile --colors",
+
+    "build": "webpack -p --config webpack.production.config.js --progress --profile --colors"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "gyss",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.13.2",
     "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.13.2",
     "babel-preset-react": "^6.11.1",
+    "copy-webpack-plugin": "^3.0.1",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
-    "webpack": "^1.13.1"
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
   }
 }
